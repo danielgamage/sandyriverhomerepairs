@@ -1,29 +1,294 @@
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+body, select, input, textarea, button {
   color: #333;
-}
+  font-family: 'myriad-pro', sans-serif; }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
+* {
+  box-sizing: border-box;
+  transition: color 0.1s ease, opacity 0.1s ease; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:visited {
+    color: inherit; }
+
+h1, h2 {
+  margin: 0;
+  font-family: 'clavo', serif;
+  font-weight: 500; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1em;
+  margin: 0; }
+
+ul {
+  padding: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+html {
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden; }
+
+body {
   font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-}
+  overflow-x: hidden;
+  background-color: #f8f7f1;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
 
-.hero-unit h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
-}
+header > div, div.block > div, footer > section {
+  max-width: 64rem;
+  margin: auto; }
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+section {
+  position: relative; }
+  section .line {
+    display: block; }
+
+header {
+  padding: 2rem 1rem; }
+
+footer, .block {
+  padding: 3rem 1rem; }
+
+header {
+  background: #3D2D21;
+  color: #f8f7f1; }
+  header a {
+    display: block;
+    margin: auto;
+    max-width: 64rem; }
+  header img {
+    width: 100%; }
+
+.block {
+  display: block; }
+
+#banner {
+  background-image: url("../images/banner-working-lake.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem; }
+  #banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, rgba(248, 247, 241, 0.7), rgba(248, 247, 241, 0.9) 75%); }
+  #banner h2 {
+    position: relative;
+    z-index: 10;
+    color: #3D2D21;
+    margin-left: auto;
+    font-size: 1.7rem; }
+
+#services {
+  background-color: #f8f7f1;
+  padding-bottom: 6em; }
+  #services li {
+    display: block;
+    position: relative;
+    vertical-align: top;
+    padding: 0.5em 0;
+    margin-right: -4px; }
+    #services li svg {
+      width: 3em !important;
+      height: 3em !important;
+      display: block;
+      position: absolute; }
+      #services li svg * {
+        fill: #333; }
+    #services li div {
+      padding-left: 1em;
+      display: block;
+      max-width: 90%;
+      margin-left: 3em; }
+    #services li strong {
+      display: block; }
+    #services li span {
+      font-size: 0.8em;
+      color: #737373; }
+  #services h1 {
+    text-align: center; }
+  #services p {
+    margin: 1em auto;
+    max-width: 32rem;
+    text-align: center; }
+
+#about {
+  background-color: #d8d4c9;
+  color: #333;
+  padding-bottom: 12rem; }
+  #about:before, #about:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    background-size: 14em, 13em;
+    box-sizing: border-box;
+    z-index: 50;
+    background-repeat: repeat-x; }
+  #about:before {
+    padding: 4em;
+    top: -8em;
+    background-image: url("../images/trees.svg"), url("../images/trees2.svg"); }
+  #about:after {
+    padding: 6em;
+    bottom: 0;
+    background-image: url("../images/treesbottom.svg"), url("../images/treesbottom2.svg"); }
+  #about li {
+    display: inline-block;
+    padding: 1rem 0.5rem; }
+  #about h2 {
+    text-align: center; }
+
+#pricing li {
+  padding: 0.5em 0;
+  max-width: 100%;
+  text-align: center; }
+
+#contact, #pricing {
+  background-color: #d8d4c9; }
+
+.block.contact {
+  padding: 1em; }
+
+#form {
+  text-align: center;
+  padding: 1em;
+  max-width: 25em;
+  background-color: #f8f7f1;
+  z-index: 70; }
+
+form {
+  margin: auto;
+  text-align: left; }
+
+input, textarea, label {
+  width: 100%;
+  padding: 0.5em;
+  display: block; }
+
+label {
+  text-alignf: left;
+  font-weight: bold; }
+
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  border-bottom: 3px solid #d8d4c9;
+  margin: 0 auto 1em; }
+
+input[type="submit"] {
+  border-radius: 0.5em;
+  border: 0;
+  padding: 1em 3em;
+  color: #f8f7f1;
+  background: #3D2D21;
+  font-weight: bold;
+  box-shadow: 0 0.5em #1c150f;
+  position: relative; }
+  input[type="submit"]:active {
+    top: 0.4em;
+    box-shadow: 0 0.1em #310; }
+
+li {
+  display: block;
+  max-width: 25em; }
+
+html.no-inlinesvg #services li div {
+  padding: 0;
+  margin: 0;
+  max-width: 100%; }
+
+footer {
+  bottom: 0;
+  width: 100%;
+  display: block;
+  color: #333;
+  background-color: #d8d4c9;
+  position: relative; }
+  footer a {
+    font-weight: bold;
+    border-bottom: 0.1em solid rgba(255, 255, 255, 0.8); }
+
+.site-credit {
+  font-size: 0.7em; }
+
+.caption {
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  font-size: 0.8rem;
+  word-spacing: 0.05em; }
+
+@media only screen and (min-width: 40em) {
+  body {
+    font-size: 1.3em; }
+
+  header, footer, .block {
+    padding: 2em; }
+
+  header h1 {
+    background-image: url("../images/logo-long.svg");
+    padding: 3.8%; }
+
+  .left {
+    text-align: left; }
+
+  .right {
+    text-align: right; }
+
+  #services li {
+    width: 50%;
+    padding: 1em;
+    display: inline-block; }
+
+  #about ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #about ul li {
+      width: calc(50% - 1rem); } }
+@media only screen and (min-width: 48em) {
+  h1 {
+    font-size: 2em; }
+
+  .block.gallery {
+    padding: 10em 2em; }
+
+  #banner {
+    padding: 7rem 4rem; }
+    #banner::after {
+      background-image: linear-gradient(to right, rgba(248, 247, 241, 0), rgba(248, 247, 241, 0.6) 75%); }
+    #banner h2 {
+      max-width: 28rem;
+      text-align: right; } }
+@media only screen and (min-width: 65em) {
+  #services li {
+    width: 33%; }
+
+  #banner::after {
+    background-image: linear-gradient(to right, rgba(248, 247, 241, 0) 25%, rgba(248, 247, 241, 0.6) 75%); } }
+@media only screen and (min-width: 100em) {
+  body {
+    font-size: 1.5em; } }
